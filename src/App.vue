@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div id="app">
     <header>
-      <img class="logo" src="/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
+      <img id="logo" src="./images/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
       <nav>
         <router-link :to="{name: 'home'}"> Home </router-link>
         <router-link :to="{name: ''}">About</router-link>
@@ -49,81 +49,80 @@ header {
   background-color: #ffffff;
   padding: 0 1em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: .4s;
 }
 
-main {
-  grid-area: main;
-  margin-top: 6rem;
-}
-
-footer {
-  grid-area: footer;
-  padding: .2rem;
-  color: black;
-  text-align: center;
-  border-radius: 5px;
-}
-
-header {
+#logo {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: .5rem 1rem;
-  background-color: white;
-}
-
-header img {
-  max-width: 100px;
-  border-radius: 5px;
   cursor: pointer;
+  margin-right: auto;
 }
 
 nav {
   display: flex;
+  flex-grow: 1;
   justify-content: flex-end;
 
 }
 
 nav a {
-  text-decoration: none;
-  color: #000000;
-  margin: 0px 1em;
-  padding: .4em 1em;
+  margin: 0px 2em;
+  padding: .3em 1em;
   border-radius: 8px;
+  color: var(--vt-c-light-1);
+  text-decoration: none;
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  transition: .4s;
 }
 
-.router-link-active{
-    font-weight: bold;
-    color: black;
+main {
+  grid-area: main;
+  margin-top: 6em;
 }
 
+footer {
+  grid-area: footer;
+  padding: .2em;
+  text-align: center;
+  border-radius: 5px;
+  height: auto;
+}
 
+@media screen and (max-width: 1024px) {
 
-@media (min-width: 1024px) {
+  #logo {
+    display: none;
+  }
+
   header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+    place-content: center;
+    height: 100px;
   }
 
   nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+    justify-content: center;
   }
+
+  nav a {
+    margin: 0px 2em;
+    padding: .3em 1em;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+
 }
+
+@media screen and (max-width: 650px){
+
+  nav a {
+    margin: 0px .1em;
+    padding: .2em 1em;
+    font-size: 1rem;
+  }
+
+}
+
 </style>

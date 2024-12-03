@@ -1,4 +1,8 @@
 @import './base.css';
+@font-face {
+  font-family: Nimbus;
+  src: url(../fonts/TAN-NIMBUS.ttf);
+}
 
 
 #app {
@@ -6,13 +10,19 @@
   font-weight: normal;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.title {
+  font-family: Nimbus;
+  font-size: 8rem;
+  text-shadow: 1px 1px 2px rgb(77, 77, 77);
+  padding: .5rem 0rem;
+  text-align: center;
 }
+
+.subtitle {
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px rgb(77, 77, 77);
+}
+
 
 @media (hover: hover) {
   a:hover {
@@ -20,10 +30,14 @@ a,
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   body {
     display: flex;
     place-items: center;
+  }
+
+  .title {
+    font-size: 6rem;
   }
 
   #app {

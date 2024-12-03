@@ -1,6 +1,6 @@
 <template>
-  <div class="home">
-    <img id="logo" src="../images/header_logo.jpeg" alt="">
+  <div id="home">
+    <img id="logo" src="@/assets/images/header_logo.jpeg" alt="">
     <div id="heading-line">
       <h1 id="home-title" class="title">
         e komo mai!
@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="background-image">
-    <img src="../images/2.png" alt="">
+    <img src="@/assets/images/2.png" alt="">
   </div>
 </template>
 
@@ -21,13 +21,16 @@
 
 <style>
 
-.home{
-  margin-top: 2rem;
+#home{
+  background-color: var(--vt-c-white);
+  z-index: 9998;
+  padding-top: 1em;
 }
 
 #logo{
-  display: block;
+  display: flex;
   margin: 0 auto;
+  padding: 0em 0em;
 }
 
 #home-title{

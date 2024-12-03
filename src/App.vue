@@ -8,9 +8,9 @@ import { RouterLink, RouterView } from 'vue-router'
       <img id="logo" src="./images/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
       <nav>
         <router-link :to="{name: 'home'}"> Home </router-link>
-        <router-link :to="{name: ''}">About</router-link>
-        <router-link :to="{name: ''}">Gallery</router-link>
-        <router-link :to="{name: ''}">Contact</router-link>
+        <router-link :to="{name: 'about'}">About</router-link>
+        <router-link :to="{name: 'gallery'}">Gallery</router-link>
+        <router-link :to="{name: 'contact'}">Contact</router-link>
       </nav>
     </header>
 

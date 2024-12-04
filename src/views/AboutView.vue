@@ -45,7 +45,7 @@
   /* BACKGROUND */
   background: url('@/assets/images/3.png');
   background-position: center center;
-  background-size:auto;
+  background-size: auto;
   background-repeat: no-repeat;
 
 }

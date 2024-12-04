@@ -31,7 +31,7 @@ export default{
 
 .left {
   border-radius: 0px 350px 350px 0px;
-  padding: 2em 4em 2em 2em;
+  padding: 2em 6em 2em 2em;
 }
 
 .right {
@@ -43,7 +43,25 @@ export default{
   margin-bottom: .5em;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
 
+  #content {
+    width: 75%;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  #content {
+    width: 100%;
+    border-radius: 250px;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  
 }
 </style>

@@ -34,8 +34,8 @@
 }
 
 #home-title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #intro-message {
@@ -45,7 +45,7 @@
 .background-image {
   display: flex;
   width: 100%;
-  animation: 1s ease-in-out slide-up;
+  animation: 1s slide-up;
 }
 
 .background-image > img {

@@ -94,7 +94,7 @@ footer {
 
 @media screen and (max-width: 1024px) {
 
-  #logo {
+  #header-logo {
     display: none;
   }
 
@@ -119,13 +119,15 @@ footer {
 
 @media screen and (max-width: 650px){
 
+  #header-logo {
+    display: none;
+  }
+
   nav a {
     margin: 0px .1em;
     padding: .2em 1em;
     font-size: 1rem;
   }
-
-
 }
 
 </style>

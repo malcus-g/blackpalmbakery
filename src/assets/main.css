@@ -75,7 +75,8 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
+
   body {
     display: flex;
     place-items: center;
@@ -89,6 +90,10 @@
     font-size: 4rem;
   }
 
+  .subtitle {
+    font-size: 2rem;
+  }
+
   .body {
     font-size: 1.25rem;
   }
@@ -96,5 +101,24 @@
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .body {
+    font-size: 1rem;
   }
 }

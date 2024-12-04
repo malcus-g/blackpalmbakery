@@ -12,7 +12,7 @@
 
 .title {
   font-family: Nimbus;
-  font-size: 8rem;
+  font-size: 6rem;
   text-shadow: 1px 1px 2px rgb(77, 77, 77);
   text-align: center;
 }
@@ -33,6 +33,41 @@
   font-size: 1.5rem;
 }
 
+@keyframes slide-left {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    margin-top: -100%;
+  }
+  to {
+    margin-top: 0%;
+  }
+}
 
 @media (hover: hover) {
   a:hover {

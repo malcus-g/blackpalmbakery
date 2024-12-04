@@ -80,7 +80,7 @@ nav a {
 
 main {
   grid-area: main;
-  margin-top: 4em;
+  margin-top: 5em;
 }
 
 footer {

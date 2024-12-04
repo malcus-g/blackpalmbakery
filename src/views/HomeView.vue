@@ -45,6 +45,7 @@
 .background-image {
   display: flex;
   width: 100%;
+  animation: 1s ease-in-out slide-up;
 }
 
 .background-image > img {

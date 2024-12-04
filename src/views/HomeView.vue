@@ -15,15 +15,10 @@
   </div>
 </template>
 
-<script>
-
-</script>
-
 <style>
 
 #home{
   background-color: var(--vt-c-white);
-  z-index: 9998;
   padding-top: 1em;
 }
 
@@ -50,7 +45,7 @@
 .background-image > img{
   object-fit: cover;
   width: 100%;
-  height: 55em;
+  height: auto;
 }
 
 </style>

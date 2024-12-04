@@ -5,7 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 <template>
   <div id="app">
     <header>
-      <img id="logo" src="@/assets/images/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
+      <img id="header-logo" src="@/assets/images/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
       <nav>
         <router-link :to="{name: 'home'}"> Home </router-link>
         <router-link :to="{name: 'about'}">About</router-link>
@@ -47,15 +47,16 @@ header {
   height: auto;
   z-index: 9999;
   background-color: #ffffff;
-  padding: 0 1em;
+  padding: .5em 0em .5em 1em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: .4s;
 }
 
-#logo {
+#header-logo {
   display: flex;
   cursor: pointer;
   margin-right: auto;
+  height: 75px;
 }
 
 nav {
@@ -67,7 +68,7 @@ nav {
 
 nav a {
   margin: 0px 2em;
-  padding: .3em 1em;
+  padding: 0.3em 1em;
   border-radius: 8px;
   color: var(--vt-c-light-1);
   text-decoration: none;
@@ -79,7 +80,7 @@ nav a {
 
 main {
   grid-area: main;
-  margin-top: 6em;
+  margin-top: 4em;
 }
 
 footer {

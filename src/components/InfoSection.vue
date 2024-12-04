@@ -21,8 +21,9 @@ export default{
   display: flex;
   flex-direction: column;
   place-content: center;
-  height: 100%;
+  height: auto;
   width: 60%;
+  margin: 3em 0em;
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   text-align: center;
@@ -35,10 +36,14 @@ export default{
 
 .right {
   border-radius: 350px 0px 0px 350px;
-  padding: 2em 2em 2em 4em;
+  padding: 2em 2em 2em 6em;
 }
 
 #about > h1 {
   margin-bottom: .5em;
+}
+
+@media screen and (max-width: 1024px){
+
 }
 </style>

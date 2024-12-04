@@ -31,7 +31,7 @@
 <template>
   <div id="background">
     <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
-    <!-- <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/> -->
+    <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
   </div>
 </template>
 
@@ -39,11 +39,11 @@
 <style>
 #background {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   flex-direction: column;
   /* BACKGROUND */
-  background-image: url('@/assets/images/3.png');
+  background: url('@/assets/images/3.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +58,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 5em 0px;
 }
 
 

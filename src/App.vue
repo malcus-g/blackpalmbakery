@@ -83,8 +83,10 @@ main {
 }
 
 footer {
+  display: flex;
   grid-area: footer;
   padding: .2em;
+  justify-content: center;
   text-align: center;
   height: auto;
 }
@@ -121,6 +123,7 @@ footer {
     padding: .2em 1em;
     font-size: 1rem;
   }
+
 
 }
 

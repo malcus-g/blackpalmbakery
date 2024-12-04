@@ -4,6 +4,10 @@
   export default {
 
     components: {
+      /* InfoSection PROPS:
+                            title: string
+                            body: string
+                            isLeft: boolean   // determines if the info section aligns left or right*/
       InfoSection
     },
 
@@ -27,7 +31,7 @@
 <template>
   <div id="background">
     <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
-    <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
+    <!-- <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/> -->
   </div>
 </template>
 

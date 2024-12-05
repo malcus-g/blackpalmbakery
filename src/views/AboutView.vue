@@ -29,21 +29,19 @@
   </script>
 
 <template>
-  <div>
-    <img src="@/assets/images/3.png" alt="" id="background-img"/>
-    <div id="content">
-      <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
-      <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
-    </div>
+  <img src="@/assets/images/3.png" alt="" id="background-img"/>
+  <div id="about-content">
+    <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
+    <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
   </div>
 </template>
 
 
 <style>
-#content {
+#about-content {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -59,7 +57,7 @@
 
 .info-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   z-index: 9;

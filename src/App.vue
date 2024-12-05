@@ -3,7 +3,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div id="app">
+  <div id="app-main">
     <header>
       <img id="header-logo" src="@/assets/images/header_logo.jpeg" alt="logo" @click="this.$router.push({name: 'home'})"/>
       <nav>
@@ -25,13 +25,14 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style scoped>
 
-#app {
+#app-main {
   display: grid;
   grid-template-areas:
   "header"
   "main"
   "footer";
   grid-template-rows: auto auto auto;
+  /* grid-template-columns: 1fr; */
   min-height: 100vh;
 }
 
@@ -60,10 +61,6 @@ header {
 }
 
 nav {
-  position: absolute;
-  top: 50%;
-  right: 1em;
-  transform: translateY(-50%);
   display: flex;
   justify-content: flex-end;
   width: auto;

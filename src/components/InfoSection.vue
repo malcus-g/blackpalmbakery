@@ -8,22 +8,21 @@ export default{
 
 <template>
   <div id="about-container">
-    <section id="content" :class="{ left: isLeft, right: !isLeft }">
+    <section id="info-content" :class="{ left: isLeft, right: !isLeft }">
       <h1 v-if=title class="section-title">{{ title }}</h1>
       <p class="body">{{ body }}</p>
     </section>
   </div>
 </template>
 
-<style scoped>
-
-#content {
+<style>
+#info-content {
   display: flex;
   flex-direction: column;
   place-content: center;
   z-index: inherit;
   height: auto;
-  width: 60%;
+  width: 55%;
   margin: 3em 0em;
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
@@ -49,7 +48,7 @@ export default{
 
 @media screen and (max-width: 1024px) {
 
-  #content {
+  #info-content {
     width: 75%;
   }
 
@@ -57,7 +56,7 @@ export default{
 
 @media screen and (max-width: 768px) {
 
-  #content {
+  #info-content {
     width: 100%;
     border-radius: 100px;
     padding: 2em;

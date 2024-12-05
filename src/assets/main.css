@@ -75,6 +75,26 @@
   }
 }
 
+@media screen and (min-width: 1920px) {
+
+  .title {
+    font-size: 8rem;
+  }
+
+  .section-title {
+    font-size: 6rem;
+  }
+
+  .subtitle {
+    font-size: 3rem;
+  }
+
+  .body {
+    font-size: 1.5rem;
+  }
+
+}
+
 @media screen and (max-width: 1024px) {
 
   body {
@@ -83,7 +103,7 @@
   }
 
   .title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .section-title {

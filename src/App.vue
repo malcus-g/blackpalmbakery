@@ -36,16 +36,16 @@ import { RouterLink, RouterView } from 'vue-router'
 }
 
 header {
-  grid-area: header;
+  position: fixed;
   display: flex;
+  grid-area: header;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 9999;
+  z-index: 10;
   background-color: #ffffff;
   padding: .5em 0em .5em 1em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -60,10 +60,13 @@ header {
 }
 
 nav {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
   display: flex;
-  flex-grow: 1;
   justify-content: flex-end;
-
+  width: auto;
 }
 
 nav a {
@@ -104,7 +107,10 @@ footer {
   }
 
   nav {
+    top: auto; 
     justify-content: center;
+    transform: none;
+    width: 100%;
   }
 
   nav a {

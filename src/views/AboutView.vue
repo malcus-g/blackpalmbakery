@@ -45,18 +45,12 @@
   /* BACKGROUND */
   background: url('@/assets/images/3.png');
   background-position: center center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-
 }
 
 #aloha {
   justify-content: flex-end;
-  animation: 1s slide-left;
-}
-
-#olivia {
-  animation: 1s slide-right;
 }
 
 .info-section {

@@ -17,6 +17,10 @@ export default{
 
 <style scoped>
 
+/* #about-container {
+  position: relative;
+} */
+
 #content {
   display: flex;
   flex-direction: column;
@@ -27,16 +31,19 @@ export default{
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   text-align: center;
+  box-shadow: var(--vt-c-black) 1px 1px 10px;
 }
 
 .left {
   border-radius: 0px 350px 350px 0px;
   padding: 2em 6em 2em 2em;
+  animation: 1s slide-right;
 }
 
 .right {
   border-radius: 350px 0px 0px 350px;
   padding: 2em 2em 2em 6em;
+  animation: 1s slide-left;
 }
 
 #about > h1 {
@@ -55,13 +62,10 @@ export default{
 
   #content {
     width: 100%;
-    border-radius: 250px;
+    border-radius: 100px;
     padding: 2em;
+    margin: 2em 0em;
   }
 }
 
-@media screen and (max-width: 480px) {
-
-  
-}
 </style>

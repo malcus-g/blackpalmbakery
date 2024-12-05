@@ -30,42 +30,42 @@
 }
 
 .body {
-  font-size: 1.5rem;
+  font-size: 1.33rem;
 }
 
 @keyframes slide-left {
   from {
-    margin-left: 100%;
+    transform: translateX(100%);
   }
   to {
-    margin-left: 0%;
+    transform: translateX(0%);
   }
 }
 
 @keyframes slide-right {
   from {
-    margin-left: -100%;
+    transform: translateX(-100%);
   }
   to {
-    margin-left: 0%;
+    transform: translateX(0%);
   }
 }
 
 @keyframes slide-up {
   from {
-    margin-top: 100%;
+    transform: translateY(100%);
   }
   to {
-    margin-top: 0%;
+    transform: translateY(0%);
   }
 }
 
 @keyframes slide-down {
   from {
-    margin-top: -100%;
+    transform: translateY(-100%);
   }
   to {
-    margin-top: 0%;
+    transform: translateY(0%);
   }
 }
 

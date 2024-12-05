@@ -4,13 +4,16 @@ export function createStore(){
   return _createStore({
 
     state: {
-
+      images: [
+        'THANK-YOU.jpg',
+        'poster.jpg'
+      ]
     },
 
     mutations: {
 
     },
-    
+
     strict: true
   })
 }

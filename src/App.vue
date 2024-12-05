@@ -31,8 +31,7 @@ import { RouterLink, RouterView } from 'vue-router'
   "header"
   "main"
   "footer";
-  grid-template-rows: auto auto auto;
-  /* grid-template-columns: 1fr; */
+  grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 

@@ -17,14 +17,11 @@ export default{
 
 <style scoped>
 
-/* #about-container {
-  position: relative;
-} */
-
 #content {
   display: flex;
   flex-direction: column;
   place-content: center;
+  z-index: inherit;
   height: auto;
   width: 60%;
   margin: 3em 0em;

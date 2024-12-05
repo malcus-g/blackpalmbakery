@@ -31,7 +31,7 @@ import { RouterLink, RouterView } from 'vue-router'
   "header"
   "main"
   "footer";
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   min-height: 100vh;
 }
 
@@ -89,10 +89,12 @@ main {
 footer {
   display: flex;
   grid-area: footer;
+  height: auto;
+  z-index: 9;
   padding: .2em;
   justify-content: center;
   text-align: center;
-  height: auto;
+  background-color: var(--vt-c-white);
 }
 
 @media screen and (max-width: 1024px) {
@@ -107,7 +109,7 @@ footer {
   }
 
   nav {
-    top: auto; 
+    top: auto;
     justify-content: center;
     transform: none;
     width: 100%;

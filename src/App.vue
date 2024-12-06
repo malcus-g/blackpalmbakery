@@ -85,10 +85,11 @@ main {
 footer {
   display: flex;
   grid-area: footer;
-  height: auto;
+  height: 40px;
   z-index: 9;
   padding: .2em;
   justify-content: center;
+  align-items: center;
   text-align: center;
   background-color: var(--vt-c-white);
 }

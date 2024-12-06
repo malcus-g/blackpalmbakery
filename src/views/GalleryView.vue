@@ -10,7 +10,8 @@ export default {
 
 <template>
   <div class="gallery-container">
-    <image-slider :slides="this.$store.state.images" />
+    <img src="@/assets/images/3.png" alt="" class="background-img"/>
+    <image-slider :slides="this.$store.state.images" class="image-slider" />
   </div>
 </template>
 

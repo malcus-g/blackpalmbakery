@@ -90,9 +90,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 75%;
-  height: 90%;
-  box-shadow: 0px 0px 2px rgb(0, 0, 0, 75%);
+  width: 70%;
+  height: 95%;
+  background-color: var(--vt-c-white);
+  box-shadow: 0px 0px 3px rgb(0, 0, 0, 75%);
+  border-radius: 5px;
+  animation: 1s slide-down;
 }
 
 .image-slider-inner {
@@ -101,6 +104,7 @@ export default {
   height: 500px;
   overflow: hidden;
   box-shadow: 1px 1px 5px var(--vt-c-black);
+  border-radius: 5px;
 }
 
 

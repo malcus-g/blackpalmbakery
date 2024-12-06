@@ -29,7 +29,7 @@
   </script>
 
 <template>
-  <img src="@/assets/images/3.png" alt="" id="background-img"/>
+  <img src="@/assets/images/3.png" alt="" class="background-img"/>
   <div id="about-content">
     <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
     <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
@@ -44,15 +44,6 @@
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
-}
-
-#background-img {
-  position: fixed ;
-  display: flex;
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  z-index: 8;
 }
 
 .info-section {

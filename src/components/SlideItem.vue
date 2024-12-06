@@ -33,6 +33,10 @@ export default {
   left: 0;
 }
 
+.slide-item > img {
+  object-position: center;
+}
+
 .slide-in-enter-active,
 .slide-in-leave-active,
 .slide-out-enter-active,

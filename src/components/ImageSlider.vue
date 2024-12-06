@@ -93,18 +93,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 72.5%;
   height: 85%;
   background-color: var(--vt-c-white);
   box-shadow: 0px 0px 3px rgb(0, 0, 0, 75%);
-  border-radius: 5px;
+  border-radius: 10px;
   animation: 1s slide-down;
 }
 
 .image-slider-inner {
   position: relative;
-  width: 900px;
-  height: 500px;
+  width: 85%;
+  height: 80%;
   overflow: hidden;
   box-shadow: 1px 1px 5px var(--vt-c-black);
   border-radius: 5px;

@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="gallery-container">
-    <image-slider />
+    <image-slider :slides="this.$store.state.images" />
   </div>
 </template>
 
@@ -19,8 +19,8 @@ export default {
 .gallery-container{
   display: flex;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
-  margin-top: 1.5em;
+  align-items: center;
 }
 </style>

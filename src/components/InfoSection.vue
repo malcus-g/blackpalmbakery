@@ -15,7 +15,7 @@ export default{
   </div>
 </template>
 
-<style>
+<style scoped>
 #info-content {
   display: flex;
   flex-direction: column;

@@ -1,80 +1,107 @@
 <script>
-import image1 from '@/assets/images/gallery/poster.jpg';
-import image2 from '@/assets/images/gallery/THANK-YOU.jpg';
+import SlideItem from './SlideItem.vue';
+import SliderControls from './SliderControls.vue';
 
 export default {
+
+  props: ['slides'],
+
   data() {
     return {
-      imageId: 0,
-      images: [image1, image2]
+      currentSlide: 0,
+      slideInterval: null,
+      direction: 'right'
     }
+  },
+
+  components: {
+    SlideItem,
+    SliderControls
   },
 
   methods: {
     slideLeft(){
-      this.imageId = (this.imageId > 0) ? --this.imageId : this.images.length - 1;
+      this.stopSlideTimer();
+      this.currentSlide = (this.currentSlide > 0) ? --this.currentSlide : this.slides.length - 1;
+      this.direction = 'left';
+      this.startSlideTimer();
     },
 
     slideRight(){
-      this.imageId = (this.imageId < this.images.length - 1) ? ++this.imageId : 0;
+      this.stopSlideTimer();
+      this.currentSlide = (this.currentSlide < this.slides.length - 1) ? ++this.currentSlide : 0;
+      this.direction = 'right';
+      this.startSlideTimer();
+    },
+
+    setCurrentSlide(index){
+      this.currentSlide = index;
+    },
+
+    startSlideTimer(){
+      this.stopSlideTimer();
+      this.slideInterval = setInterval(() => {
+        const index = this.currentSlide < this.slides.length - 1 ? ++this.currentSlide : 0;
+        this.setCurrentSlide(index);
+      }, 5000);
+    },
+
+    stopSlideTimer() {
+      clearInterval(this.slideInterval);
     }
   },
 
   computed: {
     currentImage() {
-        return this.images[this.imageId] || '';
+        return this.slides[this.currentSlide];
       }
   },
+
+  mounted() {
+    this.startSlideTimer();
+  },
+
+  beforeUnmount(){
+    this.stopSlideTimer();
+  }
 
 }
 </script>
 
 <template>
-  <section class="image-slider"
-          :style="{ backgroundImage: 'url(' + currentImage + ')' }">
-    <button class="arrow-left" @click="slideLeft()">
-      <font-awesome-icon icon="fa-solid fa-arrow-left" />
-    </button>
-    <button class="arrow-right" @click="slideRight()">
-      <font-awesome-icon icon="fa-solid fa-arrow-right" />
-    </button>
+  <section class="image-slider">
+    <div class="image-slider-inner">
+      <slide-item
+        v-for="(slide, index) in slides"
+        :slide="slide"
+        :key="`item-${index}`"
+        :current-slide="currentSlide"
+        :index="index"
+        :direction="direction" >
+      </slide-item>
+      <slider-controls @slideLeft="slideLeft" @slideRight="slideRight"></slider-controls>
+    </div>
   </section>
 </template>
 
 <style scoped>
+
 .image-slider {
   display: flex;
-  min-height: 30em;
-  width: 75%;
-  height: 100%;
-  z-index: 9;
-  align-items: center;
-  justify-content: space-between;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-.image-slider *{
-  box-sizing: border-box;
-}
-
-.arrow-left, .arrow-right {
-  display: flex;
-  width: 2em;
-  height: 2em;
-  font-size: 1.5rem;
   justify-content: center;
   align-items: center;
-  margin: 1em;
-  border: none;
-  border-radius: 50%;
-  background: var(--vt-c-white);
-  cursor: pointer;
-  transition: .3s;
+  width: 75%;
+  height: 90%;
+  box-shadow: 0px 0px 2px rgb(0, 0, 0, 75%);
 }
 
-.arrow-left:hover, .arrow-right:hover {
-  transform: scale(120%);
+.image-slider-inner {
+  position: relative;
+  width: 900px;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px var(--vt-c-black);
 }
+
+
 </style>

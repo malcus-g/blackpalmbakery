@@ -37,7 +37,7 @@
 </template>
 
 
-<style>
+<style scoped>
 #about-content {
   display: flex;
   width: 100vw;

@@ -41,6 +41,7 @@ export default {
     startSlideTimer(){
       this.stopSlideTimer();
       this.slideInterval = setInterval(() => {
+        this.direction = 'right';
         const index = this.currentSlide < this.slides.length - 1 ? ++this.currentSlide : 0;
         this.setCurrentSlide(index);
       }, 5000);
@@ -77,21 +78,23 @@ export default {
         :key="`item-${index}`"
         :current-slide="currentSlide"
         :index="index"
-        :direction="direction" >
+        :direction="direction"
+        @mouseenter="stopSlideTimer"
+        @mouseout="startSlideTimer">
       </slide-item>
       <slider-controls @slideLeft="slideLeft" @slideRight="slideRight"></slider-controls>
     </div>
   </section>
 </template>
 
-<style scoped>
+<style>
 
 .image-slider {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70%;
-  height: 95%;
+  height: 85%;
   background-color: var(--vt-c-white);
   box-shadow: 0px 0px 3px rgb(0, 0, 0, 75%);
   border-radius: 5px;

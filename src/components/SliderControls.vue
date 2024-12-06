@@ -13,7 +13,7 @@ export default{
   </button>
 </template>
 
-<style scoped>
+<style>
 
 .slider-control {
   display: inline-block;
@@ -22,6 +22,7 @@ export default{
   height: 45px;
   top: calc(50% - 25px);
   border: none;
+  border-radius: 3px;
   color: var(--vt-c-white);
   font-weight: bold;
   background: var(--vt-c-black);

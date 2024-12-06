@@ -2,6 +2,8 @@
 
 export default {
 
+  emits: ['mouseenter', 'mouseout'],
+
   props: ['slide', 'currentSlide', 'index', 'direction'],
 
   computed: {
@@ -14,14 +16,14 @@ export default {
 </script>
 
 <template>
-  <transition :name="transitionEffect">
+  <transition :name="transitionEffect" @mouseenter="$emit('mouseenter')" @mouseout="$emit('mouseout')">
     <div class="slide-item" v-show="currentSlide === index">
       <img :src="slide" />
     </div>
   </transition>
 </template>
 
-<style scoped>
+<style>
 
 .slide-item {
   position: absolute;

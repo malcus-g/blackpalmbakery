@@ -23,7 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style>
 
 #app-main {
   display: grid;
@@ -62,7 +62,7 @@ header {
 nav {
   display: flex;
   justify-content: flex-end;
-  width: auto;
+  width: 100vw;
 }
 
 nav a {
@@ -86,7 +86,7 @@ footer {
   display: flex;
   grid-area: footer;
   height: 40px;
-  z-index: 9;
+  z-index: 10;
   padding: .2em;
   justify-content: center;
   align-items: center;

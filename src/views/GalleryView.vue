@@ -16,11 +16,11 @@ export default {
 </template>
 
 
-<style scoped>
+<style>
 .gallery-container{
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }

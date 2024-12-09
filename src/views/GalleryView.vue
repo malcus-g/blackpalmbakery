@@ -24,4 +24,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+@media screen and (max-width: 480px) {
+
+  .gallery-container {
+    height: 100%;
+  }
+}
 </style>

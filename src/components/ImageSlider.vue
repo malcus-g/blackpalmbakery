@@ -93,8 +93,9 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 72.5%;
+  width: 70%;
   height: 85%;
+  min-height: 275px;
   background-color: var(--vt-c-white);
   box-shadow: 0px 0px 3px rgb(0, 0, 0, 75%);
   border-radius: 10px;
@@ -103,12 +104,40 @@ export default {
 
 .image-slider-inner {
   position: relative;
-  width: 85%;
-  height: 80%;
+  max-height: 31rem;
+  min-height: 400px;
+  max-width: 55rem;
+  width: 90%;
+  height: 90%;
   overflow: hidden;
   box-shadow: 1px 1px 5px var(--vt-c-black);
   border-radius: 5px;
 }
 
+@media screen and (max-width: 1024px) {
 
+  .image-slider {
+    height: 40%;
+    min-height: 400px;
+    width: 90%
+  }
+
+  .image-slider-inner {
+    max-height: 16rem;
+    min-height: 270px
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .image-slider {
+    height: 34%;
+    min-height: 300px;
+  }
+
+  .image-slider-inner {
+    min-height: 175px;
+  }
+
+}
 </style>

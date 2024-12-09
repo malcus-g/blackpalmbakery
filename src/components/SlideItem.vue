@@ -18,7 +18,7 @@ export default {
 <template>
   <transition :name="transitionEffect" @mouseenter="$emit('mouseenter')" @mouseout="$emit('mouseout')">
     <div class="slide-item" v-show="currentSlide === index">
-      <img :src="slide" />
+      <img :src="slide" class="slide-content"/>
     </div>
   </transition>
 </template>
@@ -27,15 +27,13 @@ export default {
 
 .slide-item {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-.slide-item > img {
-  object-position: center;
-}
 
 .slide-in-enter-active,
 .slide-in-leave-active,

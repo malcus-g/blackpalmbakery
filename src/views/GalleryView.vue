@@ -28,4 +28,8 @@ export default {
   padding: 1em 0em 2em 0em;
 }
 
+.image-slider {
+  animation: slide-up 1s;
+}
+
 </style>

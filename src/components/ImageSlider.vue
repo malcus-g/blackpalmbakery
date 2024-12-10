@@ -70,45 +70,30 @@ export default {
 </script>
 
 <template>
-  <section class="image-slider">
-    <div class="image-slider-inner">
-      <slide-item
-        v-for="(slide, index) in slides"
-        :slide="slide"
-        :key="`item-${index}`"
-        :current-slide="currentSlide"
-        :index="index"
-        :direction="direction"
-        @mouseenter="stopSlideTimer"
-        @mouseout="startSlideTimer">
-      </slide-item>
-      <slider-controls @slideLeft="slideLeft" @slideRight="slideRight"></slider-controls>
-    </div>
-  </section>
+  <div class="image-slider">
+    <slide-item
+      v-for="(slide, index) in slides"
+      :slide="slide"
+      :key="`item-${index}`"
+      :current-slide="currentSlide"
+      :index="index"
+      :direction="direction"
+      @mouseenter="stopSlideTimer"
+      @mouseout="startSlideTimer">
+    </slide-item>
+    <slider-controls @slideLeft="slideLeft" @slideRight="slideRight"></slider-controls>
+  </div>
 </template>
 
 <style>
 
 .image-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 70%;
-  height: 85%;
-  min-height: 275px;
-  background-color: var(--vt-c-white);
-  box-shadow: 0px 0px 3px rgb(0, 0, 0, 75%);
-  border-radius: 10px;
-  animation: 1s slide-down;
-}
-
-.image-slider-inner {
   position: relative;
   max-height: 31rem;
   min-height: 400px;
   max-width: 55rem;
-  width: 90%;
-  height: 90%;
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
   box-shadow: 1px 1px 5px var(--vt-c-black);
   border-radius: 5px;
@@ -117,13 +102,6 @@ export default {
 @media screen and (max-width: 1024px) {
 
   .image-slider {
-    height: 40%;
-    min-height: 400px;
-    width: 90%
-  }
-
-  .image-slider-inner {
-    max-height: 16rem;
     min-height: 270px
   }
 }
@@ -131,11 +109,7 @@ export default {
 @media screen and (max-width: 480px) {
 
   .image-slider {
-    height: 34%;
-    min-height: 300px;
-  }
-
-  .image-slider-inner {
+    max-height: 15em;
     min-height: 175px;
   }
 

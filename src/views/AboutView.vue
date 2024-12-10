@@ -5,9 +5,9 @@
 
     components: {
       /* InfoSection PROPS:
-                            title: string
-                            body: string
-                            isLeft: boolean   // determines if the info section aligns left or right*/
+          title: string
+          body: string
+          isLeft: boolean   // determines if the info section aligns left or right */
       InfoSection
     },
 
@@ -29,10 +29,11 @@
   </script>
 
 <template>
-  <img src="@/assets/images/3.png" alt="" class="background-img"/>
-  <div id="about-content">
-    <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
-    <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
+  <div id="about-container" class="container">
+    <div id="about-content">
+      <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
+      <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
+    </div>
   </div>
 </template>
 
@@ -40,10 +41,14 @@
 <style>
 #about-content {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
+  background-color: var(--vt-c-white);
+  box-shadow: var(--vt-c-black) 1px 1px 10px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .info-section {
@@ -51,7 +56,7 @@
   align-items: flex-start;
   width: 100%;
   height: 100%;
-  z-index: 9;
+  z-index: 8;
 }
 
 #aloha {

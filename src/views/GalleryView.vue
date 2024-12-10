@@ -9,26 +9,23 @@ export default {
 </script>
 
 <template>
-  <div class="gallery-container">
-    <img src="@/assets/images/3.png" alt="" class="background-img"/>
-    <image-slider :slides="this.$store.state.images" class="image-slider" />
+  <div class="container">
+    <div class="content">
+      <h1 class="title">Our Past Bakes</h1>
+      <image-slider :slides="this.$store.state.images" class="image-slider" />
+    </div>
   </div>
 </template>
 
 
-<style>
-.gallery-container{
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+<style scoped>
+
+.title {
+  margin: .5em 0em;
 }
 
-@media screen and (max-width: 480px) {
-
-  .gallery-container {
-    height: 100%;
-  }
+.content {
+  padding: 1em 0em 2em 0em;
 }
+
 </style>

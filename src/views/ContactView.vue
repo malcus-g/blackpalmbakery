@@ -24,7 +24,6 @@
 .section-title {
   font-size: 2.5rem;
   margin-top: 1em;
-  animation: slide-left 1s ease-in-out;
 }
 
 .title {

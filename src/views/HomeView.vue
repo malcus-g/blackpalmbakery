@@ -29,10 +29,12 @@
 #home-title {
   display: flex;
   justify-content: center;
+  animation: 1s fade-in ease-in-out;
 }
 
 #intro-message {
   text-align: center;
+  animation: 1.5s fade-in ease-in-out;
 }
 
 .cookie-image {

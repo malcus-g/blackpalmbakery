@@ -22,6 +22,7 @@ export default {
 
 .title {
   margin: .5em 0em;
+  animation: 1.5s fade-in ease-in-out;
 }
 
 .content {

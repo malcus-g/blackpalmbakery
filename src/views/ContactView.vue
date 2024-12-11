@@ -27,6 +27,6 @@
 }
 
 .title {
-  animation: slide-right 1.5s ease-in-out;
+  animation: fade-in 1.5s ease-in-out;
 }
 </style>

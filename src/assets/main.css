@@ -4,6 +4,10 @@
   src: url(../fonts/TAN-NIMBUS.ttf);
 }
 
+@font-face {
+  font-family: Dream Avenue;
+  src: url(../fonts/Dream-Avenue.ttf);
+}
 
 #app {
   max-width: 100vw;
@@ -51,19 +55,26 @@
 }
 
 .section-title {
-  font-family: Nimbus;
-  font-size: 5rem;
+  font-family: Dream Avenue;
+  font-size: 6rem;
   text-shadow: 1px 1px 2px rgb(77, 77, 77);
   text-align: center;
 }
 
 .subtitle {
-  font-size: 3rem;
+  font-family: Nimbus;
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 1px rgb(77, 77, 77);
+}
+
+.subtitle-sm {
+  font-size: 2.5rem;
   text-shadow: 1px 1px 1px rgb(77, 77, 77);
 }
 
 .body {
   font-size: 1.33rem;
+  font-weight: bold;
 }
 
 .image-slider {
@@ -129,7 +140,7 @@
   }
 
   .section-title {
-    font-size: 6rem;
+    font-size: 7rem;
   }
 
   .subtitle {
@@ -170,7 +181,7 @@
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .subtitle {

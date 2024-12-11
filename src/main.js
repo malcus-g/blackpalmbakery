@@ -13,8 +13,10 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import icons */
 import { faDiamond } from '@fortawesome/free-solid-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 library.add(faDiamond);
+library.add(faInstagram)
 
 const store = createStore();
 const app = createApp(App);

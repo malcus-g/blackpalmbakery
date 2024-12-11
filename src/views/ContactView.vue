@@ -1,7 +1,7 @@
 <template>
   <div id="contact-container" class="container">
     <div id="contact-content" class="content">
-      <h1 class="section-title">Questions?</h1>
+      <h1 class="subtitle">Questions?</h1>
       <h2 class="title">Connect with us!</h2>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWEP53OLL6vZFecY-hMiwuVnwfoynbajfHMMWJJxdAFZvF0A/viewform?embedded=true" class="form">Loading…</iframe>
     </div>
@@ -21,7 +21,7 @@
   color: var(--vt-c-black);
 }
 
-.section-title {
+.subtitle {
   font-size: 2.5rem;
   margin-top: 1em;
 }

@@ -30,30 +30,32 @@
 
 <template>
   <div id="about-container" class="container">
-    <div id="about-content">
+    <div id="about-content" class="content">
+      <img src="@/assets/images/cookies.png" alt="cookies" id="cookies-image" class="image"/>
       <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
+      <img src="@/assets/images/cupcake.png" alt="cupcake" id="cupcake-image" class="image"/>
       <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
     </div>
   </div>
 </template>
 
 
-<style>
-#about-content {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: var(--vt-c-white);
-  box-shadow: var(--vt-c-black) 1px 1px 10px;
-  border-radius: 10px;
-  overflow: hidden;
+<style scoped>
+
+.content {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "cookies aloha aloha"
+    "about about cupcake";
+  padding-bottom: 1em;
 }
+
 
 .info-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   height: 100%;
   z-index: 8;
@@ -61,8 +63,51 @@
 
 #aloha {
   justify-content: flex-end;
+  grid-area: aloha;
 }
 
+#olivia {
+  justify-content: flex-start;
+  grid-area: about;
+}
+
+.image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  place-self: center;
+  z-index: 7;
+  animation: fade-in 1.25s ease-in-out;
+}
+
+#cookies-image {
+  grid-area: cookies;
+}
+
+#cupcake-image {
+  grid-area: cupcake;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .body {
+    font-size: 1rem;
+  }
+
+  .content {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-areas:
+      "aloha aloha aloha"
+      "cookies . cupcake"
+      "about about about";
+  }
+}
 
 
 </style>

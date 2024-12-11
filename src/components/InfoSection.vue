@@ -22,8 +22,7 @@ export default{
   place-content: center;
   z-index: inherit;
   height: auto;
-  width: 55%;
-  margin: 3em 0em;
+  width: 100%;
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   text-align: center;
@@ -44,14 +43,6 @@ export default{
 
 #about > h1 {
   margin-bottom: .5em;
-}
-
-@media screen and (max-width: 1024px) {
-
-  #info-content {
-    width: 75%;
-  }
-
 }
 
 @media screen and (max-width: 768px) {

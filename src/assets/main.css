@@ -37,7 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--vt-c-white);
+  background-color: var(--color-background);
   padding-top: 1em;
   width: 100%;
   height: fit-content;

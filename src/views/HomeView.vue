@@ -30,7 +30,7 @@
         </div>
       </section>
       <section class="cookie-image">
-        <img src="@/assets/images/2.png" alt="">
+        <img src="@/assets/images/real-cookies.png" alt="">
       </section>
     </div>
   </div>
@@ -124,7 +124,6 @@
   display: flex;
   width: 100%;
   animation: 1s slide-up;
-  box-shadow: inset var(--vt-c-black) 1px 1px 10px;
 }
 
 .cookie-image > img {

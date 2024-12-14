@@ -18,7 +18,7 @@
 
 }
 .section-title, .title {
-  color: var(--vt-c-black);
+  color: var(--color-text-light);
 }
 
 .subtitle {
@@ -27,6 +27,6 @@
 }
 
 .title {
-  animation: fade-in 1.5s ease-in-out;
+  animation: fade-in 1.25s ease-in-out;
 }
 </style>

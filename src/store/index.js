@@ -1,20 +1,13 @@
 import {createStore as _createStore} from 'vuex';
 
-// import image1 from '@/assets/images/gallery/poster.jpg';
-// import image2 from '@/assets/images/gallery/THANK-YOU.jpg';
+const images = import.meta.glob('@/assets/images/gallery/*.jpg');
+const galleryImages = Object.keys(images);
 
 export function createStore(){
   return _createStore({
 
     state: {
-      images: [
-        'https://picsum.photos/id/18/900/500',
-        'https://picsum.photos/id/19/900/500',
-        'https://picsum.photos/id/20/900/500',
-        'https://picsum.photos/id/21/900/500',
-        'https://picsum.photos/id/22/900/500',
-        'https://picsum.photos/id/23/900/500'
-      ]
+      gallery: galleryImages
     },
 
     mutations: {

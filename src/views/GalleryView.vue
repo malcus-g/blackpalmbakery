@@ -12,7 +12,7 @@ export default {
   <div class="container">
     <div class="content">
       <h1 class="title">Our Past Bakes</h1>
-      <image-slider :slides="this.$store.state.images" class="image-slider" />
+      <image-slider :slides="this.$store.state.gallery" class="image-slider" />
     </div>
   </div>
 </template>

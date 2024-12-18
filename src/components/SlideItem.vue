@@ -34,6 +34,11 @@ export default {
   height: 100%;
 }
 
+.slide-content {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .slide-in-enter-active,
 .slide-in-leave-active,

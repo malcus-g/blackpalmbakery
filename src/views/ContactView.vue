@@ -3,7 +3,7 @@
     <div id="contact-content" class="content">
       <h1 class="subtitle">Questions?</h1>
       <h2 class="title">Connect with us!</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScWEP53OLL6vZFecY-hMiwuVnwfoynbajfHMMWJJxdAFZvF0A/viewform?embedded=true" class="form">Loading…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeGlCx-h9EODSP5035hGvW-e4awBTllmc_bJOobtiaiYVrGg/viewform?embedded=true" class="form">Loading…</iframe>
     </div>
   </div>
 </template>

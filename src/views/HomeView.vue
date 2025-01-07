@@ -13,9 +13,9 @@
       <section id="services-blurb">
         <div id="services">
           <p class="subtitle-sm">Weddings</p>
-          <font-awesome-icon icon="fa-solid fa-diamond" />
+          <font-awesome-icon icon="fa-solid fa-diamond" class="diamond-icon" />
           <p class="subtitle-sm">Private Events</p>
-          <font-awesome-icon icon="fa-solid fa-diamond" />
+          <font-awesome-icon icon="fa-solid fa-diamond" class="diamond-icon" />
           <p class="subtitle-sm">Birthdays</p>
         </div>
         <div id="tagline-container">
@@ -71,6 +71,10 @@
   padding: 2em 0em 0em 0em;
 }
 
+.diamond-icon {
+  margin: 0em 1em;
+}
+
 #services {
   display: flex;
   justify-content: space-evenly;
@@ -81,7 +85,7 @@
   letter-spacing: 2.5px;
   font-weight: bolder;
   text-shadow: .5px .5px var(--vt-c-black);
-
+  text-align: center;
 }
 
 #tagline-container {
@@ -130,6 +134,12 @@
   object-fit: cover;
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 768px){
+  #services {
+    flex-direction: column;
+  }
 }
 
 </style>

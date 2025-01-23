@@ -89,14 +89,12 @@ export default {
 
 .image-slider {
   position: relative;
-  max-height: 31rem;
+  max-height: 35rem;
   min-height: 400px;
-  max-width: 55rem;
+  max-width: 60rem;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  box-shadow: 1px 1px 5px var(--vt-c-black);
-  border-radius: 5px;
 }
 
 @media screen and (max-width: 1024px) {

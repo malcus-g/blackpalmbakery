@@ -19,7 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <router-view />
     </main>
     <footer>
-      <p>&copy; 2024 The Black Palm Bakery. All rights reserved.</p>
+      <p>&copy; 2024-2025 The Black Palm Bakery. All rights reserved.</p>
     </footer>
   </div>
 </template>

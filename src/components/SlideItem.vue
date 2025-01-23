@@ -35,7 +35,7 @@ export default {
 }
 
 .slide-content {
-  object-fit: cover;
+  object-fit: scale-down;
   width: 100%;
   height: 100%;
 }

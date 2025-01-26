@@ -3,11 +3,10 @@ import SlideItem from './SlideItem.vue';
 import SliderControls from './SliderControls.vue';
 
 export default {
-
-  props: ['slides'],
-
   data() {
     return {
+      galleryBaseUrl: 'https://malcus-g.github.io/bpbImages/gallery/',
+      slides: [],
       currentSlide: 0,
       slideInterval: null,
       direction: 'right'
@@ -19,7 +18,17 @@ export default {
     SliderControls
   },
 
+  created() {
+    this.populateSlides();
+  },
+
   methods: {
+    populateSlides() {
+      for (let i = 0; i < 50; i++) {
+        this.slides.push(`${this.galleryBaseUrl}${i}.jpg`);
+      }
+    },
+
     slideLeft(){
       this.stopSlideTimer();
       this.currentSlide = (this.currentSlide > 0) ? --this.currentSlide : this.slides.length - 1;

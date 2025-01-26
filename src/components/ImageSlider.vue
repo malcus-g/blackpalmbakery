@@ -24,7 +24,7 @@ export default {
 
   methods: {
     populateSlides() {
-      for (let i = 0; i < 50; i++) {
+      for (let i = 1; i <= 50; i++) {
         this.slides.push(`${this.galleryBaseUrl}${i}.jpg`);
       }
     },

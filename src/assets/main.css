@@ -171,11 +171,6 @@
   .subtitle-sm {
     font-size: 1.75rem;
   }
-
-  .body {
-    font-size: 1.25rem;
-  }
-
 }
 
 @media screen and (max-width: 480px) {

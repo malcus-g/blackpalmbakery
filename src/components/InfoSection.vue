@@ -7,10 +7,10 @@ export default{
 </script>
 
 <template>
-  <div id="about-container">
+  <div>
     <section id="info-content" :class="{ left: isLeft, right: !isLeft }">
       <h1 v-if=title class="section-title">{{ title }}</h1>
-      <p class="body">{{ body }}</p>
+      <p class="body" v-for="paragraph in body" :key="paragraph">{{ paragraph }}</p>
     </section>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default{
 
 .left {
   border-radius: 0px 350px 350px 0px;
-  padding: 2em 6em 2em 2em;
+  padding: 2em 8em 2em 2em;
   animation: 1s slide-right;
 }
 
@@ -41,8 +41,8 @@ export default{
   animation: 1s slide-left;
 }
 
-#about > h1 {
-  margin-bottom: .5em;
+#info-content > p {
+  margin: 0em 0em 1em 0em;
 }
 
 @media screen and (max-width: 768px) {

@@ -27,6 +27,9 @@
       };
     },
 
+    mounted() {
+      document.title = 'About | Black Palm Bakery';
+    }
   }
   </script>
 

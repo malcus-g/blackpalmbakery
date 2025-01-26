@@ -1,3 +1,12 @@
+<script>
+export
+default {
+  mounted() {
+    document.title = 'Home | Black Palm Bakery';
+  }
+}
+</script>
+
 <template>
   <div id="home-container" class="container">
     <div id="home-content" class="content">

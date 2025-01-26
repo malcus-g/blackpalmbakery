@@ -1,3 +1,11 @@
+<script>
+export default {
+  mounted() {
+    document.title = 'Contact | Black Palm Bakery';
+  }
+}
+</script>
+
 <template>
   <div id="contact-container" class="container">
     <div id="contact-content" class="content">

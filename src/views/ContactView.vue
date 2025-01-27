@@ -1,5 +1,11 @@
 <script>
+import ContentContainer from '@/components/ContentContainer.vue';
+
 export default {
+  components: {
+    ContentContainer
+  },
+
   mounted() {
     document.title = 'Contact | Black Palm Bakery';
   }
@@ -7,13 +13,11 @@ export default {
 </script>
 
 <template>
-  <div id="contact-container" class="container">
-    <div id="contact-content" class="content">
-      <h1 class="subtitle">Questions?</h1>
-      <h2 class="title">Connect with us!</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeGlCx-h9EODSP5035hGvW-e4awBTllmc_bJOobtiaiYVrGg/viewform?embedded=true" class="form">Loading…</iframe>
-    </div>
-  </div>
+  <content-container>
+    <h1 class="subtitle">Questions?</h1>
+    <h2 class="title">Connect with us!</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfeGlCx-h9EODSP5035hGvW-e4awBTllmc_bJOobtiaiYVrGg/viewform?embedded=true" class="form">Loading…</iframe>
+  </content-container>
 </template>
 
 
@@ -23,6 +27,7 @@ export default {
   width: 80%;
   height: 920px;
   border: none;
+  margin: 1em 0em;
 
 }
 .section-title, .title {

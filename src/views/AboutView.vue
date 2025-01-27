@@ -1,5 +1,6 @@
   <script>
   import InfoSection from '@/components/InfoSection.vue';
+  import ContentContainer from '@/components/ContentContainer.vue';
 
   export default {
 
@@ -10,7 +11,8 @@
       body: Array of strings
       isLeft: boolean - determines if the info section aligns left or right
       */
-      InfoSection
+      InfoSection,
+      ContentContainer
     },
 
     data(){
@@ -34,20 +36,20 @@
   </script>
 
 <template>
-  <div id="about-container" class="container">
-    <div id="about-content" class="content">
+  <content-container>
+    <div id="about">
       <img src="@/assets/images/cookies.png" alt="cookies" id="cookies-image" class="image"/>
       <info-section id="aloha" class="info-section" :title="this.aloha.title" :body="this.aloha.body" :is-left="false"/>
       <img src="@/assets/images/cupcake.png" alt="cupcake" id="cupcake-image" class="image"/>
       <info-section id="olivia" class="info-section" :title="this.olivia.title" :body="this.olivia.body" :is-left="true"/>
     </div>
-  </div>
+  </content-container>
 </template>
 
 
 <style scoped>
 
-.content {
+#about {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto auto;

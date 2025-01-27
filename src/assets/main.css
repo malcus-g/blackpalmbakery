@@ -1,12 +1,12 @@
 @import './base.css';
 @font-face {
   font-family: Nimbus;
-  src: url(../fonts/TAN-NIMBUS.ttf);
+  src: url(../../public/fonts/TAN-NIMBUS.ttf);
 }
 
 @font-face {
   font-family: Dream Avenue;
-  src: url(../fonts/Dream-Avenue.ttf);
+  src: url(../../public/fonts/dream-avenue.ttf);
 }
 
 #app {

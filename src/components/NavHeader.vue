@@ -123,6 +123,7 @@ nav.open > a:hover {
   border: none;
   font-size: 2.5rem;
   cursor: pointer;
+  color: var(--vt-c-black);
 }
 
 .menu-toggle:hover {

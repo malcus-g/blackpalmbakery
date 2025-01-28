@@ -1,3 +1,9 @@
+<!--
+This file is way too large and needs to be abstracted into smaller components.
+There has to be a better way to do this, but I can't be arsed right now.
+It looks  decent and functions how you'd expect. Might refactor later.
+-->
+
 <script setup>
 import { RouterLink } from 'vue-router'
 </script>
@@ -17,6 +23,10 @@ export default {
 
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+
+    closeMenu() {
+      this.isMenuOpen = false;
     }
   }
 }
@@ -25,7 +35,7 @@ export default {
 <template>
   <header>
     <img id="header-logo" src="@/assets/images/logo.png" alt="logo" @click="goToHome()"/>
-    <nav :class="{ open: isMenuOpen }">
+    <nav :class="{ open: isMenuOpen }" @click="closeMenu()" @mouseleave="closeMenu()">
       <router-link :to="{name: 'home'}"> Home </router-link>
       <router-link :to="{name: 'about'}">About</router-link>
       <router-link :to="{name: 'gallery'}">Gallery</router-link>
@@ -47,6 +57,7 @@ header {
   background-color: #fff;
   border-bottom: 1px solid #ddd;
   box-shadow: 0px 4px 6px rgb(0, 0, 0, .2);
+  z-index: 10;
 }
 
 #header-logo {
@@ -58,33 +69,6 @@ nav {
   display: flex;
 }
 
-nav.open {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  gap: 1em;
-  top: 105px;
-  padding: 1em 0;
-  width: 100%;
-}
-
-nav.open > a:hover {
-  background-color: rgb(0, 0, 0, .3);
-}
-
-nav.open > a{
-  padding: 1em;
-  background-color: rgb(0, 0, 0, .1);
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
 nav a {
   margin: 0px 2em;
   padding: 0.3em 1em;
@@ -94,8 +78,56 @@ nav a {
   text-align: center;
   font-size: 1.25rem;
   font-weight: bolder;
+  animation: fade-in .3s ease-in-out;
 }
 
+a:last-child {
+  border: 2px solid black;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+}
+
+nav.open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: var(--vt-c-white);
+  align-items: center;
+  gap: 1em;
+  top: 109px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2em 1em;
+  width: 90%;
+  animation: fade-in .3s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, .2);
+}
+
+nav.open > a{
+  padding: .5em;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0, .2);
+}
+
+nav.open > a:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 6px rgb(0, 0, 0, .2);
+}
+
+.menu-toggle {
+  display: flex;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.menu-toggle:hover {
+  transform: scale(1.1);
+}
 
 @media screen and (max-width: 1024px) {
   nav a {
@@ -113,10 +145,6 @@ nav a {
     background-color: #fff;
     border: 1px solid #ddd;
     width: 200px;
-  }
-
-  .menu-toggle {
-    display: flex;
   }
 }
 </style>

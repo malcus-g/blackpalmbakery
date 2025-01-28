@@ -8,22 +8,6 @@ import NavHeader from './components/NavHeader.vue';
 export default {
   components: {
     NavHeader
-  },
-
-  data() {
-    return {
-      isMenuOpen: false
-    }
-  },
-
-  methods: {
-    goToHome() {
-      this.$router.push({name: 'home'})
-    },
-
-    toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-    }
   }
 }
 </script>
@@ -42,13 +26,11 @@ export default {
 </template>
 
 <style scoped>
-
 #app-main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
 
 main {
   display: flex;

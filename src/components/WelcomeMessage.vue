@@ -20,6 +20,10 @@ export default {
 </template>
 
 <style>
+#heading-line {
+  width: 75%;
+}
+
 #logo {
   display: flex;
   margin: 0 auto;

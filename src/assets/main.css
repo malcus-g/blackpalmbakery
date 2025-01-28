@@ -132,7 +132,7 @@
 
 
   .title {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 
   .section-title {
@@ -148,14 +148,33 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
 
   .title {
-    font-size: 4rem;
+    font-size: 3.05rem;
   }
 
   .section-title {
     font-size: 3rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .body {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
   }
 
   .subtitle {

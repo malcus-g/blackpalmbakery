@@ -25,7 +25,7 @@ export default {
 <template>
   <header>
     <img id="header-logo" src="@/assets/images/logo.png" alt="logo" @click="goToHome()"/>
-    <nav :class="{ open: isMenxuOpen }">
+    <nav :class="{ open: isMenuOpen }">
       <router-link :to="{name: 'home'}"> Home </router-link>
       <router-link :to="{name: 'about'}">About</router-link>
       <router-link :to="{name: 'gallery'}">Gallery</router-link>

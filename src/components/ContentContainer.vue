@@ -23,10 +23,9 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-background);
-  padding-top: 1em;
   width: 100%;
+  padding: 1em 0 0 0;
   height: fit-content;
-  min-height: 100vh;
   box-shadow: var(--vt-c-black) 1px 1px 10px;
   border-radius: 10px;
   overflow: hidden;

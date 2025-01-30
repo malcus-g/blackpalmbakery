@@ -106,7 +106,7 @@
     font-size: 1rem;
   }
 
-  .content {
+  #about {
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
     grid-template-areas:

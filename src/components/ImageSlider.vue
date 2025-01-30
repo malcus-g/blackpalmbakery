@@ -113,12 +113,4 @@ export default {
   }
 }
 
-@media screen and (max-width: 480px) {
-
-  .image-slider {
-    max-height: 15em;
-    min-height: 175px;
-  }
-
-}
 </style>

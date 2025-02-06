@@ -23,6 +23,7 @@ export default{
   z-index: inherit;
   height: auto;
   width: 100%;
+  margin: 2em 0em;
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   text-align: center;

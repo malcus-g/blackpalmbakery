@@ -7,7 +7,7 @@
     <p class="subtitle-sm">Birthdays</p>
   </div>
   <div id="tagline-container">
-    <p class="tagline-body">Crafting custom pastries for your special day. Follow us on Instagram to see updates and recent work!</p>
+    <p class="tagline-body body">Crafting custom pastries for your special day. Follow us on Instagram to see updates and recent work!</p>
   </div>
 </template>
 
@@ -40,7 +40,6 @@
 
 .tagline-body {
   font-weight: bolder;
-  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 768px){

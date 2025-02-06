@@ -21,20 +21,18 @@ export default {
 </script>
 
 <template>
-  <div>
-    <content-container>
-      <welcome-message :greeting="'e komo mai'" :message="'Welcome!'" />
-      <inner-content-section>
-        <services-blurb />
-        <socials-button :url="'https://www.instagram.com/blackpalmbakery_/'" :platform="'Instagram'">
-          <font-awesome-icon icon="fa-brands fa-instagram" />
-        </socials-button>
-      </inner-content-section>
-      <section class="cookie-image">
-        <img src="@/assets/images/real-cookies.png" alt="">
-      </section>
-    </content-container>
-  </div>
+  <content-container>
+    <welcome-message :greeting="'e komo mai'" :message="'Welcome!'" />
+    <inner-content-section>
+      <services-blurb />
+      <socials-button :url="'https://www.instagram.com/blackpalmbakery_/'" :platform="'Instagram'">
+        <font-awesome-icon icon="fa-brands fa-instagram" />
+      </socials-button>
+    </inner-content-section>
+    <section class="cookie-image">
+      <img src="@/assets/images/real-cookies.png" alt="">
+    </section>
+  </content-container>
 </template>
 
 <style scoped>

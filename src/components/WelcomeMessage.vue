@@ -26,7 +26,7 @@ export default {
 
 #logo {
   display: flex;
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 0em 0em 1em 0em;
   width: 25%;
 }

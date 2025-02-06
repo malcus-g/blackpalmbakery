@@ -36,7 +36,7 @@ export default {
   border-radius: 8px;
 }
 
-.instagram-link:hover {
+.socials-link:hover {
   transform: scale(1.1);
 }
 </style>

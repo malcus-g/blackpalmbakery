@@ -26,12 +26,11 @@ export default {
 
 <style scoped>
 .title {
-  margin: .5em 0em;
   animation: 1.5s fade-in ease-in-out;
 }
 
 .gallery {
-  padding: 1em 0em 2em 0em;
+  padding: 2em 10em;
  }
 
 .image-slider {

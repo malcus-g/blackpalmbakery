@@ -1,7 +1,7 @@
 <script>
 export default{
 
-  props: ['title', 'body', 'isLeft'],
+  props: ['title', 'isLeft'],
 
 }
 </script>
@@ -9,8 +9,7 @@ export default{
 <template>
   <div>
     <section id="info-content" :class="{ left: isLeft, right: !isLeft }">
-      <h1 v-if=title class="section-title">{{ title }}</h1>
-      <p class="body" v-for="paragraph in body" :key="paragraph">{{ paragraph }}</p>
+      <h1 class="section-title">{{ title }}</h1>
     </section>
   </div>
 </template>
@@ -23,7 +22,7 @@ export default{
   z-index: inherit;
   height: auto;
   width: 100%;
-  margin: 2em 0em;
+  margin: 4em 0em 2em 0em;
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   text-align: center;
@@ -32,25 +31,20 @@ export default{
 
 .left {
   border-radius: 0px 350px 350px 0px;
-  padding: 2em 8em 2em 2em;
+  padding: 1em 4em 1em 1em;
   animation: 1s slide-right;
 }
 
 .right {
   border-radius: 350px 0px 0px 350px;
-  padding: 2em 2em 2em 6em;
+  padding: 1em 1em 1em 4em;
   animation: 1s slide-left;
-}
-
-#info-content > p {
-  margin: 0em 0em 1em 0em;
 }
 
 @media screen and (max-width: 768px) {
 
   #info-content {
     width: 100%;
-    border-radius: 100px;
     padding: 2em;
     margin: 2em 0em;
   }

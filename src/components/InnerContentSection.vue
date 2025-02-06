@@ -16,4 +16,11 @@
   margin: 5em;
   padding: 1em;
 }
+
+@media screen and (max-width: 768px) {
+  #inner-content-section {
+    margin: 2em;
+    padding: 1em;
+  }
+}
 </style>

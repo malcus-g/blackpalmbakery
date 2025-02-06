@@ -11,7 +11,7 @@ export default {
 	<div id="socials">
     <a :href="url"
       target="_blank"
-      class="socials-link">
+      class="socials-link body">
         <slot /> {{ platform }}
     </a>
   </div>
@@ -31,7 +31,6 @@ export default {
   background-color: var(--vt-c-black);
   color: var(--vt-c-white);
   font-weight: bolder;
-  font-size: 1.5rem;
   padding: .3em;
   border-radius: 8px;
 }

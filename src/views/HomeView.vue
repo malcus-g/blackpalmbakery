@@ -1,3 +1,24 @@
+<script setup>
+import { onMounted, ref } from 'vue'
+
+const cookieImageRef = ref(null)
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    })
+  }, { threshold: 0.1 })
+
+  if (cookieImageRef.value) {
+    observer.observe(cookieImageRef.value);
+  }
+})
+</script>
+
 <script>
 import ContentContainer from '@/components/ContentContainer.vue';
 import WelcomeMessage from '../components/WelcomeMessage.vue'
@@ -12,7 +33,7 @@ export default {
     SocialsButton,
     InnerContentSection,
     ServicesBlurb
-},
+  },
 
   mounted() {
     document.title = 'Home | Black Palm Bakery';
@@ -29,7 +50,7 @@ export default {
         <font-awesome-icon icon="fa-brands fa-instagram" />
       </socials-button>
     </inner-content-section>
-    <section class="cookie-image">
+    <section ref="cookieImageRef" class="cookie-image">
       <img src="@/assets/images/real-cookies.png" alt="">
     </section>
   </content-container>
@@ -39,12 +60,18 @@ export default {
 .cookie-image {
   display: flex;
   width: 100%;
-  animation: 1s slide-up;
+  opacity: 0;
+  transform: translateY(25%);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.cookie-image.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cookie-image > img {
   object-fit: cover;
   width: 100%;
-  height: auto;
 }
 </style>

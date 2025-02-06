@@ -13,7 +13,7 @@
   animation: 1.5s fade-in ease-in-out;
   border-radius: 10px;
   box-shadow: inset var(--vt-c-black) 0px 0px 5px;
-  margin: 1em;
+  margin: 5em;
   padding: 1em;
 }
 </style>

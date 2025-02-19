@@ -90,7 +90,10 @@ export default {
       @mouseenter="stopSlideTimer"
       @mouseout="startSlideTimer">
     </slide-item>
-    <slider-controls @slideLeft="slideLeft" @slideRight="slideRight"></slider-controls>
+    <slider-controls
+      @slideLeft="slideLeft"
+      @slideRight="slideRight">
+    </slider-controls>
   </div>
 </template>
 
@@ -101,7 +104,7 @@ export default {
   max-height: 35rem;
   min-height: 400px;
   max-width: 60rem;
-  width: 100vw;
+  width: 95vw;
   height: 100vh;
   overflow: hidden;
 }

@@ -26,7 +26,7 @@ export default{
   color: var(--vt-c-white);
   font-weight: bold;
   background: var(--vt-c-black);
-  opacity: 60%;
+  opacity: 50%;
   cursor: pointer;
   transition: .3s;
 }

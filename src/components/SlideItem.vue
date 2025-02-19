@@ -28,7 +28,6 @@ export default {
 .slide-item {
   position: absolute;
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -36,8 +35,8 @@ export default {
 
 .slide-content {
   object-fit: scale-down;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .slide-in-enter-active,

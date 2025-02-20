@@ -24,9 +24,6 @@ export default {
 .quote {
   display: flex;
   flex-direction: column;
-  margin-top: 1em;
-  padding: 1em;
-  width: clamp(20em, 75%, 50em);
 }
 
 .quote-text {
@@ -46,7 +43,7 @@ export default {
     padding: .5em;
   }
   .quote-text {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .quote-author {

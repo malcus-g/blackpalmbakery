@@ -43,4 +43,10 @@ export default{
   right: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .slider-control {
+    top: calc(100% - 45px);
+  }
+}
+
 </style>

@@ -104,8 +104,8 @@ export default {
   max-height: 35rem;
   min-height: 400px;
   max-width: 60rem;
-  width: 95vw;
-  height: 100vh;
+  width: 100%;
+  height: auto;
   overflow: hidden;
 }
 

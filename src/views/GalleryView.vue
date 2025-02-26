@@ -1,7 +1,7 @@
 <script>
-import ContentContainer from '@/components/ContentContainer.vue';
-import ImageSlider from '@/components/ImageSlider.vue';
-import QuoteBlurb from '@/components/QuoteBlurb.vue';
+import ContentContainer from '../components/containers/ContentContainer.vue';
+import ImageSlider from '../components/gallery/ImageSlider.vue';
+import QuoteBlurb from '../components/containers/QuoteBlurb.vue';
 
 export default {
   components: {
@@ -32,7 +32,7 @@ export default {
 
 <style scoped>
 .title {
-  animation: 1.5s fade-in ease-in-out;
+  animation: .75s fade-in ease-in-out;
   width: clamp(20em, 75%, 50em);
   margin: 1em 0em 0em 0em;
 }
@@ -47,7 +47,6 @@ export default {
 .image-slider {
   animation: slide-up 1s;
   width: clamp(20em, 100%, 50em);
-  /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); */
   border-radius: 5px;
   margin: 2em;
 }

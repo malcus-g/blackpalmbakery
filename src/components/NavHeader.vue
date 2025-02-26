@@ -38,6 +38,7 @@ export default {
     <nav :class="{ open: isMenuOpen }" @click="closeMenu()" @mouseleave="closeMenu()">
       <router-link :to="{name: 'home'}"> Home </router-link>
       <router-link :to="{name: 'about'}">About</router-link>
+      <router-link :to="{name: 'menu'}">Menu</router-link>
       <router-link :to="{name: 'gallery'}">Gallery</router-link>
       <router-link :to="{name: 'contact'}">Contact</router-link>
     </nav>
@@ -133,12 +134,20 @@ nav.open > a:hover {
 @media screen and (max-width: 1024px) {
   nav a {
     font-size: 1rem;
+    padding: .3em .5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
   }
 }
 
 @media (max-width: 768px) {
   nav {
     display: none;
+    z-index: 11;
     flex-direction: column;
     position: absolute;
     top: 100%;

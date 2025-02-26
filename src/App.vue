@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div id="app-main">
-    <img src="@/assets/images/3.png" alt="" class="background-img"/>
+    <img src="@/assets/images/3.png" alt="background" class="background-img"/>
     <nav-header />
     <main>
       <router-view />
@@ -42,7 +42,6 @@ footer {
   display: flex;
   grid-area: footer;
   height: auto;
-  z-index: 10;
   padding: .2em;
   width: 100%;
   justify-content: center;

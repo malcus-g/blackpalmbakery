@@ -11,19 +11,19 @@ onMounted(() => {
         observer.unobserve(entry.target);
       }
     })
-  }, { threshold: 0.1 })
+  }, { threshold: 0.1 });
 
   if (cookieImageRef.value) {
     observer.observe(cookieImageRef.value);
   }
-})
+});
 </script>
 
 <script>
-import ContentContainer from '@/components/ContentContainer.vue';
+import ContentContainer from '@/components/containers/ContentContainer.vue';
 import WelcomeMessage from '../components/WelcomeMessage.vue'
 import SocialsButton from '../components/SocialsButton.vue'
-import InnerContentSection from '@/components/InnerContentSection.vue';
+import InnerContentSection from '@/components/containers/InnerContentSection.vue';
 import ServicesBlurb from '../components/ServicesBlurb.vue'
 
 export default {
@@ -62,7 +62,7 @@ export default {
   width: 100%;
   opacity: 0;
   transform: translateY(25%);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transition: opacity .75s ease-out, transform .75s ease-out;
 }
 
 .cookie-image.animate {

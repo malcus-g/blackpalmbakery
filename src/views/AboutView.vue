@@ -1,6 +1,6 @@
   <script>
-  import InfoSection from '@/components/InfoSection.vue';
-  import ContentContainer from '@/components/ContentContainer.vue';
+  import InfoSection from '@/components/containers/InfoSection.vue';
+  import ContentContainer from '@/components/containers/ContentContainer.vue';
 
   export default {
 
@@ -72,7 +72,7 @@
 }
 
 .info-body {
-  animation: 1.5s fade-in ease-in-out;
+  animation: .75s fade-in ease-in-out;
   padding: 2em 4em;
   width: 85%;
   border-radius: 10px;
@@ -116,7 +116,7 @@
   object-fit: scale-down;
   place-self: center;
   z-index: 7;
-  animation: fade-in 1.25s ease-in-out;
+  animation: fade-in .75s ease-in-out;
 }
 
 #cookies-image {

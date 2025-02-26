@@ -1,5 +1,5 @@
 <script>
-import ContentContainer from '@/components/ContentContainer.vue';
+import ContentContainer from '@/components/containers/ContentContainer.vue';
 
 export default {
   components: {
@@ -40,6 +40,6 @@ export default {
 }
 
 .title {
-  animation: fade-in 1.25s ease-in-out;
+  animation: fade-in 1s ease-in-out;
 }
 </style>

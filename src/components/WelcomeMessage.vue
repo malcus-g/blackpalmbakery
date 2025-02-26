@@ -34,13 +34,13 @@ export default {
 #home-title {
   display: flex;
   justify-content: center;
-  animation: 1s fade-in ease-in-out;
+  animation: .75s fade-in ease-in-out;
   border-bottom: 1px solid var(--vt-c-black);
 }
 
 #intro-message {
   text-align: center;
   margin: 1em 0em 0em 0em;
-  animation: 1.5s fade-in ease-in-out;
+  animation: .75s fade-in ease-in-out;
 }
 </style>

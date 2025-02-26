@@ -21,10 +21,10 @@ onMounted(() => {
 
 <script>
 import ContentContainer from '@/components/containers/ContentContainer.vue';
-import WelcomeMessage from '../components/WelcomeMessage.vue'
-import SocialsButton from '../components/SocialsButton.vue'
+import WelcomeMessage from '../components/home/WelcomeMessage.vue'
+import SocialsButton from '../components/home/SocialsButton.vue'
 import InnerContentSection from '@/components/containers/InnerContentSection.vue';
-import ServicesBlurb from '../components/ServicesBlurb.vue'
+import ServicesBlurb from '../components/home/ServicesBlurb.vue'
 
 export default {
   components: {

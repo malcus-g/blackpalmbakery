@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div id="app-main">
-    <img src="@/assets/images/3.png" alt="background" class="background-img"/>
+    <img src="@/assets/images/4.png" alt="background" class="background-img"/>
     <nav-header />
     <main>
       <router-view />

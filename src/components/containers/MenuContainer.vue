@@ -8,7 +8,7 @@
 .container {
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: auto;
   justify-content: center;
   align-items: center;
 }

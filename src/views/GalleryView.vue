@@ -1,7 +1,7 @@
 <script>
 import ContentContainer from '../components/containers/ContentContainer.vue';
 import ImageSlider from '../components/gallery/ImageSlider.vue';
-import QuoteBlurb from '../components/containers/QuoteBlurb.vue';
+import QuoteBlurb from '../components/gallery/QuoteBlurb.vue';
 
 export default {
   components: {

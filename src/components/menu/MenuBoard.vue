@@ -10,7 +10,7 @@
   width: 100%;
   height: 100%;
   z-index: 9;
-  padding: 1em 3em;
+  padding: 1em 6em;
   background-color: var(--vt-c-white);
 }
 </style>

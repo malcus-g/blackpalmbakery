@@ -1,3 +1,5 @@
+// temporary data until I can get a database set up for dynamic menu changes
+
 const menu = [
   {
     categoryName: "Cookies",
@@ -49,7 +51,8 @@ const menu = [
                 ingredients: ""
               },
             ],
-          dozenPrice: 32
+          dozenPrice: 32,
+          color: "red"
         },
         {
           groupName: "Island Pack",
@@ -86,7 +89,8 @@ const menu = [
 
               },
             ],
-          dozenPrice: 38
+          dozenPrice: 38,
+          color: "#2261c5"
         },
         {
           groupName: "Royal Iced Sugar",
@@ -99,7 +103,8 @@ const menu = [
 
               },
             ],
-          dozenPrice: 38
+          dozenPrice: 38,
+          color: "#ecec00"
         },
       ],
     canMix: false
@@ -149,7 +154,8 @@ const menu = [
 
               },
             ],
-          dozenPrice: 32
+          dozenPrice: 32,
+          color: "#7e7eca"
         },
         {
           groupName: "Specialty",
@@ -186,7 +192,8 @@ const menu = [
                 ingredients: ""
               },
             ],
-          dozenPrice: 36
+          dozenPrice: 36,
+          color: "green"
         },
       ],
     canMix: true
@@ -205,7 +212,8 @@ const menu = [
                 ingredients: ""
               },
             ],
-          dozenPrice: 50
+          dozenPrice: 50,
+          color: "purple"
         },
         {
           groupName: "Brownies & Blondies",
@@ -232,7 +240,8 @@ const menu = [
                 ingredients: ""
               },
             ],
-          dozenPrice: 38
+          dozenPrice: 38,
+          color: "pink"
         },
       ],
     canMix: false

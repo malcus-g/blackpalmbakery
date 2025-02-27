@@ -1,4 +1,5 @@
 <script setup>
+// temporary data. this will eventually come from the store
 import { menu } from '@/store/menu.js';
 </script>
 
@@ -9,10 +10,6 @@ export default {
     return {
       menu: menu,
     }
-  },
-
-  methods: {
-
   },
 
   mounted() {
@@ -27,11 +24,30 @@ export default {
       <img class="logo" src="@/assets/images/logo.png" alt="">
     </div>
     <div class="category" v-for="(category, index) in menu" :key="index">
-      <h1 class="category-title section-title">{{ category.categoryName }}</h1>
+      <h1 class="category-title section-title">
+        {{ category.categoryName }}
+        <span class="body order-size">Dozen</span>
+      </h1>
       <div class="group" v-for="(group, index) in category.groups" :key="index">
-        <h2 class="group-title subtitle">{{ group.groupName }}</h2>
+        <h2 class="group-title subtitle group.color" :style="{ color: group.color }">
+          {{ group.groupName }}
+          <span class="body order-price">
+            ${{ group.dozenPrice }}
+          </span>
+        </h2>
         <p class="items body">
           {{ group.items.map(item => item.itemName).join(', ') }}
+        </p>
+      </div>
+      <div class="mix-n-match" v-if="category.canMix">
+        <h2 class="group-title subtitle" :style="{ color: 'orange' }">
+          Mix & Match
+          <span class="body order-price">
+            $32
+          </span>
+        </h2>
+        <p class="items body">
+          Select (3) flavors, classic or specialty, to create your perfect dozen!
         </p>
       </div>
     </div>
@@ -66,8 +82,11 @@ export default {
 }
 
 .category-title {
-  font-size: 4em;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3.5em;
+  text-align: left;
   border-bottom: 1px solid var(--vt-c-black);
 }
 
@@ -78,11 +97,18 @@ export default {
 }
 
 .group-title {
-  font-size: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
   margin: 1em 0em;
 }
 
 .items {
   display: flex;
+}
+
+.test {
+  color: #ecec00;
 }
 </style>

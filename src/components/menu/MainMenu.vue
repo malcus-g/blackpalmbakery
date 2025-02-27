@@ -35,6 +35,10 @@ export default {
             ${{ group.dozenPrice }}
           </span>
         </h2>
+        <p class="note"
+          v-if="group.groupName == 'Classics' && (category.categoryName == 'Cookies' || 'Cupcakes')">
+            &nbsp;&nbsp;&nbsp;&nbsp;* Flavors Available
+        </p>
         <p class="items body">
           {{ group.items.map(item => item.itemName).join(', ') }}
         </p>
@@ -101,11 +105,12 @@ export default {
   justify-content: space-between;
   align-items: center;
   font-size: 1.5em;
-  margin: 1em 0em;
+  margin: 1em 0em 0em 0em;
 }
 
 .items {
   display: flex;
+  margin: 1em 0em 0em 0em;
 }
 
 @media screen and (max-width: 768px) {
@@ -125,5 +130,8 @@ export default {
     font-size: 1.25em;
   }
 
+  .note {
+    font-size: .75em;
+  }
 }
 </style>

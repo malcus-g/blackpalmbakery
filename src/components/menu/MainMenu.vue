@@ -58,7 +58,7 @@ export default {
 .main-menu {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 75%;
   height: fit-content;
 }
 
@@ -78,7 +78,7 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 1em 3em;
+  padding: 1em 0em;
 }
 
 .category-title {
@@ -108,7 +108,22 @@ export default {
   display: flex;
 }
 
-.test {
-  color: #ecec00;
+@media screen and (max-width: 768px) {
+  .main-menu {
+    width: 80%;
+  }
+
+  .logo {
+    width: 25%;
+  }
+
+  .category-title {
+    font-size: 2.5em;
+  }
+
+  .group-title {
+    font-size: 1.25em;
+  }
+
 }
 </style>

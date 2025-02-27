@@ -28,7 +28,7 @@ onMounted(() => {
 <style scoped>
 .menu-title {
   display: flex;
-  width: 15%;
+  width: clamp(6em, 15%, 20em);
   height: 100%;
   position: relative;
   align-items: center;
@@ -38,8 +38,10 @@ onMounted(() => {
 
 .title {
   position: fixed;
-  top: 55%;
+  top: 45%;
   color: var(--vt-c-white);
+  text-align: center;
+  text-justify: center;
   writing-mode: vertical-rl;
   text-orientation: mixed;
   transform: rotate(180deg);
@@ -52,5 +54,11 @@ onMounted(() => {
 
 .title.animate {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-title {
+    display: none;
+  }
 }
 </style>
